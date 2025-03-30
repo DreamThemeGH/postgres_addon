@@ -1,6 +1,6 @@
 name: "PostgreSQL Database"
 description: "PostgreSQL 15 database server with memory limitations"
-version: "1.0.0"
+version: "1.0.1"
 slug: "postgres_addon"
 init: false
 arch:
