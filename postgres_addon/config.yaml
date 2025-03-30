@@ -20,8 +20,7 @@ schema:
   admin_user: "str"
   admin_password: "password"
   database_name: "str"
-# Используем базовый образ вместо кастомного
-# Теперь не нужно загружать образ в ghcr.io
+# Используем базовый образ Home Assistant
 image: "ghcr.io/home-assistant/{arch}-base:3.18"
 devices: []
 usb: false
