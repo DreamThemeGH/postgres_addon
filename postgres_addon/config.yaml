@@ -20,15 +20,10 @@ schema:
   admin_user: "str"
   admin_password: "password"
   database_name: "str"
-# Используем базовый образ Home Assistant
-image: "ghcr.io/home-assistant/{arch}-base:3.18"
-devices: []
-usb: false
-uart: false
 map:
   - share:rw
   - config:rw
 environment:
   LOG_LEVEL: "info"
 tmpfs: true
-memory_limit: 512 # Ограничение в 512 МБ
+memory_limit: 512
