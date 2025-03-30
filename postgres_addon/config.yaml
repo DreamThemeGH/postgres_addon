@@ -1,6 +1,6 @@
 name: "PostgreSQL Database"
 description: "PostgreSQL 15 database server with memory limitations"
-version: "1.0.1"
+version: "1.0.2"
 slug: "postgres_addon"
 init: false
 arch:
@@ -27,3 +27,4 @@ environment:
   LOG_LEVEL: "info"
 tmpfs: true
 memory_limit: 512
+image: "ghcr.io/home-assistant/{arch}-base:3.18"
