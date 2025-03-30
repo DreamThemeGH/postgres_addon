@@ -1,0 +1,33 @@
+name: "PostgreSQL Database"
+description: "PostgreSQL 15 database server with memory limitations"
+version: "1.0.0"
+slug: "postgres_addon"
+init: false
+arch:
+  - aarch64
+  - amd64
+  - armhf
+  - armv7
+  - i386
+startup: services
+ports:
+  5432/tcp: 5432
+options:
+  admin_user: "postgres"
+  admin_password: ""
+  database_name: "homeassistant"
+schema:
+  admin_user: "str"
+  admin_password: "password"
+  database_name: "str"
+image: "ghcr.io/yourusername/postgres-addon-{arch}"
+devices: []
+usb: false
+uart: false
+map:
+  - share:rw
+  - config:rw
+environment:
+  LOG_LEVEL: "info"
+tmpfs: true
+memory_limit: 512 # Ограничение в 512 МБ
