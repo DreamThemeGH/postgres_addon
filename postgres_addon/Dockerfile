@@ -2,14 +2,7 @@ ARG BUILD_FROM
 FROM $BUILD_FROM
 
 # Установка PostgreSQL 15
-RUN apt-get update && \
-    apt-get install -y lsb-release wget gnupg2 && \
-    echo "deb http://apt.postgresql.org/pub/repos/apt/ $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list && \
-    wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | apt-key add - && \
-    apt-get update && \
-    apt-get install -y postgresql-15 && \
-    apt-get clean && \
-    rm -rf /var/lib/apt/lists/*
+RUN apk add --no-cache postgresql15 postgresql15-client
 
 # Копирование скриптов
 COPY run.sh /

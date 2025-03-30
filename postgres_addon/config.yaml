@@ -20,7 +20,9 @@ schema:
   admin_user: "str"
   admin_password: "password"
   database_name: "str"
-image: "ghcr.io/yourusername/postgres-addon-{arch}"
+# Используем базовый образ вместо кастомного
+# Теперь не нужно загружать образ в ghcr.io
+image: "ghcr.io/home-assistant/{arch}-base:3.18"
 devices: []
 usb: false
 uart: false
