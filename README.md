@@ -1,3 +1,5 @@
+**Now it's only idea, and you can use TimescaleDB **
+
 # PostgreSQL Add-on for Home Assistant
 
 This add-on provides a PostgreSQL 15 database server for Home Assistant with memory limitations set to 512MB.
